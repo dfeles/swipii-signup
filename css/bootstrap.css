@@ -1565,7 +1565,7 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
   background-color: #f7f7f7;
   background-clip: padding-box;
   border: 0px solid #ced4da;
-  border-radius: 22px;
+  border-radius: 8px;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
 
 .form-control-lg:focus {
