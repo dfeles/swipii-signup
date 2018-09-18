@@ -10,3 +10,29 @@ select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
   transition: background-color 5000s ease-in-out 0s;
 }
+
+.alert {
+  border: 0px solid transparent;
+  padding: 1.25rem 1.5rem;
+}
+.alert-danger {
+  color: #FF0B00;
+  background-color: #FBD9D7
+}
+.alert-info {
+  color: #A51890;
+}
+
+.alert-warning {
+  color: #E87722;
+  background-color: #FCEBAC;
+}
+
+.alert-success {
+  color: #5CB8B2;
+  background-color: #DCF0F2;
+}
+
+.tooltip-inner {
+  border-radius: 5px !important;
+}
