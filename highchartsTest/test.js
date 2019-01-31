@@ -67,13 +67,9 @@ $(function () {
             data: [3, 2, 1, 3, 4, 1 ,10],
             yAxis: 1
         }, {
-            tooltip: {
-              pointFormat: '{series.name}: <b>{point.y}</b><br/>',
-              valueSuffix: ' GBP',
-            },
             type: 'spline',
-            name: 'Transactions',
-            data: [300, 267, 300, 633, 533, 174, 999],
+            name: 'Number of Transactions',
+            data: [30, 26, 30, 63, 53, 14, 99],
             marker: {
                 lineWidth: 2,
                 lineColor: Highcharts.getOptions().colors[1],
