@@ -67,8 +67,12 @@ $(function () {
             data: [3, 2, 1, 3, 4, 1 ,10],
             yAxis: 1
         }, {
+            tooltip: {
+              pointFormat: '{series.name}: <b>{point.y}</b><br/>',
+              valueSuffix: ' GBP',
+            },
             type: 'spline',
-            name: 'Views',
+            name: 'Transactions',
             data: [300, 267, 300, 633, 533, 174, 999],
             marker: {
                 lineWidth: 2,
