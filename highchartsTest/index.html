@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="test.js"></script>
+    <style>
+        .highcharts-tick, .highcharts-axis-line, .highcharts-xaxis-grid, .highcharts-series-label, .highcharts-credits {
+            opacity: 0;
+            pointer-events: none;
+        }
+        .highcharts-grid-line {
+            stroke: rgb(250, 250, 250)
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="container" style="width: 400px; height: 400px; margin: 0 auto"></div>
+    <br><br><br>
+    <div id="pieChart" style="width: 400px; height: 400px; margin: 0 auto"></div>
+</body>
+
+</html>
