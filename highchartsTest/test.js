@@ -108,9 +108,7 @@ Highcharts.chart('pieChart', {
       colorByPoint: true,
       data: [{
         name: 'Reward 1 - Free Hot Drink',
-        y: 132,
-        sliced: true,
-        selected: true
+        y: 132
       }, {
         name: 'Reward 2 - Free Cookie',
         y: 56
