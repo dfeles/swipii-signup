@@ -1,7 +1,7 @@
 $(function () {
 
     Highcharts.setOptions({
-        colors: ['#E0004D', '#E87722', '#5CB8B2', '#A51890', '#FCD757',
+        colors: ['#E87722', '#E0004D', '#5CB8B2', '#A51890', '#FCD757',
         '#058DC7', '#50B432', '#ED561B', '#DDDF00'],
         chart: {
             style: {
