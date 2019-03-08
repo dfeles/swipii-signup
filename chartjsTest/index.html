@@ -53,6 +53,11 @@
             <hr>
             <canvas id="pieChartCanvas" width="326px" style="padding:8px; margin-top: 8px"></canvas>
         </div>
+        <div class="card">
+            <h5>Distribution of redeemed rewards - Long titles</h5>
+            <hr>
+            <canvas id="pieChartLongCanvas" width="326px" style="padding:8px; margin-top: 8px"></canvas>
+        </div>
 	<script>
 
         window.chartColors = {
@@ -110,27 +115,6 @@
                             }]
                         },
                     }
-        var pieOptions = {
-                        responsive: false,
-                        title: {
-                            display: false
-                        },
-                        legend: {
-                            display: true,
-                            position: 'right'
-                        },
-                        tooltips: {
-                            mode: 'index',
-                            intersect: false,
-                            backgroundColor: '#efefef',
-                            titleFontColor: '#333',	
-                            bodyFontColor: "#333"
-                        },
-                        hover: {
-                            mode: 'nearest',
-                            intersect: true
-                        },
-                    }
 
 		var lineChart = {
 			type: 'line',
@@ -167,38 +151,108 @@
 			options: options
         };
         
-		var pieChart = {
-			type: 'pie',
-			data: {
-				datasets: [{
-					data: [
-						100,
-						52,
-						10,
-					],
-					backgroundColor: [
-						window.chartColors.main,
-						window.chartColors.second,
-						window.chartColors.third,
-					],
-					label: 'Rewards'
-				}],
-				labels: [
-					'Reward 1',
-					'Reward 2',
-					'Reward 3'
-				]
-			},
-			options: pieOptions
-		};
+        var pieOptionsLong = {
+                        responsive: false,
+                        title: {
+                            display: false
+                        },
+                        legend: {
+                            display: true,
+                            position: 'bottom'
+                        },
+                        tooltips: {
+                            mode: 'index',
+                            intersect: false,
+                            backgroundColor: '#efefef',
+                            titleFontColor: '#333',	
+                            bodyFontColor: "#333"
+                        },
+                        hover: {
+                            mode: 'nearest',
+                            intersect: true
+                        },
+                    }
+        var pieOptions = {
+                        responsive: false,
+                        title: {
+                            display: false
+                        },
+                        legend: {
+                            display: true,
+                            position: 'right'
+                        },
+                        tooltips: {
+                            mode: 'index',
+                            intersect: false,
+                            backgroundColor: '#efefef',
+                            titleFontColor: '#333',	
+                            bodyFontColor: "#333"
+                        },
+                        hover: {
+                            mode: 'nearest',
+                            intersect: true
+                        },
+                    }
+
+        var pieChart = {
+            type: 'pie',
+            data: {
+                datasets: [{
+                    data: [
+                        100,
+                        52,
+                        10,
+                    ],
+                    backgroundColor: [
+                        window.chartColors.main,
+                        window.chartColors.second,
+                        window.chartColors.third,
+                    ],
+                    label: 'Rewards'
+                }],
+                labels: [
+                    'Reward 1',
+                    'Reward 2',
+                    'Reward 3'
+                ]
+            },
+            options: pieOptions
+        };
+
+        var pieChartLong = {
+            type: 'pie',
+            data: {
+                datasets: [{
+                    data: [
+                        100,
+                        52,
+                        10,
+                    ],
+                    backgroundColor: [
+                        window.chartColors.main,
+                        window.chartColors.second,
+                        window.chartColors.third,
+                    ],
+                    label: 'Rewards'
+                }],
+                labels: [
+                    'If the rewards name is really long',
+                    'Legent should be below',
+                    'Reward 3'
+                ]
+            },
+            options: pieOptionsLong
+        };
 
 		window.onload = function() {
 			var lineChartCanvas = document.getElementById('lineChartCanvas').getContext('2d');
 			var barChartCanvas = document.getElementById('barChartCanvas').getContext('2d');
-			var pieChartCanvas = document.getElementById('pieChartCanvas').getContext('2d');
+            var pieChartCanvas = document.getElementById('pieChartCanvas').getContext('2d');
+            var pieChartLongCanvas = document.getElementById('pieChartLongCanvas').getContext('2d');
             window.myLine = new Chart(lineChartCanvas, lineChart);
             window.myBar = new Chart(barChartCanvas, barChart);
             window.myPie = new Chart(pieChartCanvas, pieChart);
+            window.myPie2 = new Chart(pieChartLongCanvas, pieChartLong);
             
 		};
 	</script>
